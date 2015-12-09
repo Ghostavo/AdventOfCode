@@ -12,13 +12,21 @@ public class Matchsticks {
      */
     public static int getStringRepresentationDelta(String input)
     {
-        System.out.println(input);
         int representation = 0;
         int meaning = 0;
 
         for(String line : input.split("\n"))
         {
+            System.out.print(line);
             representation += line.length();
+            line = line.replaceAll("^\"","");
+            line = line.replaceAll("\"$", "");
+            line = line.replaceAll("\\\\\"", "\"");
+            line = line.replaceAll("\\\\x.{2}","\\$");
+            line = line.replaceAll("\\\\\\\\", "\\\\");
+            meaning += line.length();
+
+            System.out.println(" : " + line);
         }
 
         return representation - meaning;

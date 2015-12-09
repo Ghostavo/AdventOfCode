@@ -10,6 +10,6 @@ public class MatchsticksTest extends TestCase {
 
     @Test
     public void testGetStringRepresentationDelta() throws Exception {
-        assertEquals("The difference should be 23", 23, Matchsticks.getStringRepresentationDelta("\"\"\n\"abc\"\n\"aaa\\\"aaa\"\n\"\\x27\""));
+        assertEquals("The difference should be 12", 12, Matchsticks.getStringRepresentationDelta("\"\"\n\"abc\"\n\"aaa\\\"aaa\"\n\"\\x27\""));
     }
 }
