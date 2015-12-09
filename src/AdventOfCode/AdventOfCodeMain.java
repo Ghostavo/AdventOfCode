@@ -42,7 +42,8 @@ public final class AdventOfCodeMain {
 
         System.out.println("\nDay8");
         String day8 = getStringInputFromFile("/AdventOfCode/Day8/day8.txt");
-        System.out.println("\tString length delta: " + Matchsticks.getStringRepresentationDelta(day8));
+        System.out.println("\tString length delta for representation: " + Matchsticks.getStringRepresentationDelta(day8));
+        System.out.println("\tString length delta for expansion: " + Matchsticks.getStringExpansionDelta(day8));
     }
 
     private static String getStringInputFromFile(String filename)
