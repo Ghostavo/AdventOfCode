@@ -19,11 +19,11 @@ public class Matchsticks {
         {
             System.out.print(line);
             representation += line.length();
-            line = line.replaceAll("^\"","");
-            line = line.replaceAll("\"$", "");
-            line = line.replaceAll("\\\\\"", "\"");
-            line = line.replaceAll("\\\\x.{2}","\\$");
-            line = line.replaceAll("\\\\\\\\", "\\\\");
+            line = line.replaceAll("^\"",""); //Remove first "
+            line = line.replaceAll("\"$", ""); // Remove last "
+            line = line.replaceAll("\\\\\"", "\""); // Replace \" with "
+            line = line.replaceAll("\\\\x.{2}","\\$"); // Replace \x** with $
+            line = line.replaceAll("\\\\\\\\", "\\\\"); // Replace \\ with \
             meaning += line.length();
 
             System.out.println(" : " + line);
