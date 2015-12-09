@@ -32,7 +32,6 @@ public class Matchsticks {
 
     /**
      * Day 8 puzzle, part 2
-     *
      * @param input
      * @return
      */
